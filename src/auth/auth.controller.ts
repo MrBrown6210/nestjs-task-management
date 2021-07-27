@@ -18,10 +18,4 @@ export class AuthController {
   ): Promise<{ accessToken: string }> {
     return this.authService.signIn(authCredentialsDto);
   }
-
-  @Get('/test')
-  @UseGuards(AuthGuard())
-  test(@Req() req) {
-    console.log(req);
-  }
 }
